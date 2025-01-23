@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion clone</title>
+    <link rel="shortcut icon" href="notiononlylogo.png" type="image/x-icon">
+    <!-- <style>
+      .nav-inner a:hover{
+        background-color: #e9e9e9;
+        border-radius: 5px;
+      }
+      .nav-inner a:active{
+        background-color: #d7d7d7;
+        border-radius: 5px;
+        border:none;
+      }
+
+    </style> -->
+</head>
+<body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light navvv">   <!-- Nav bar main -->
+        <div class="navbar nav-outer">
+          <a class="navbar-brand" href="#"><img src="Notionlogo.png" height="38rem"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+      
+          <div class="collapse navbar-collapse nav-inner" id="navbarTogglerDemo02"><!--   nav-inner  -->
+
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle dropdown-btn buttonaction" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Product
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">AI</a>
+                    <a class="dropdown-item" href="#">Docs</a>
+                    <a class="dropdown-item" href="#">Wikis</a>
+                    <a class="dropdown-item" href="#">Projects</a>
+                    <a class="dropdown-item" href="#">Calender</a>
+                    <a class="dropdown-item" href="#">Mail</a>
+                    <a class="dropdown-item" href="#">Sites</a>
+                    <a class="dropdown-item" href="#">Forms</a>
+                    <a class="dropdown-item" href="#">Marketplace</a>
+                    <a class="dropdown-item" href="#">Integrations</a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <div class="dropdown dropdown-outer">
+                  <button class="btn btn-secondary dropdown-toggle dropdown-btn buttonaction" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Teams
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Product</a>
+                    <a class="dropdown-item" href="#">Engineering</a>
+                    <a class="dropdown-item" href="#">Design</a>
+                    <a class="dropdown-item" href="#">Marketing</a>
+                    <a class="dropdown-item" href="#">IT</a>
+                    <a class="dropdown-item" href="#">Startups</a>
+                    <a class="dropdown-item" href="#">Enterprise</a>
+                    <a class="dropdown-item" href="#">Customer stories</a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle dropdown-btn buttonaction" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Individuals
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Personal</a>
+                    <a class="dropdown-item" href="#">Students</a>
+                    <a class="dropdown-item" href="#">Teachers</a>
+                    <a class="dropdown-item" href="#">Creators</a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle dropdown-btn buttonaction" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Download
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Notion</a>
+                    <a class="dropdown-item" href="#">Calender</a>
+                    <a class="dropdown-item" href="#">Web clipper</a>
+                    <p style="padding:0;font-size: 14px;color:#737271 ;">Notion is always at home right in <a style="text-decoration: underline;"> your browser</a></p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item a1">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              
+            </ul>
+
+                                      <!-- nav- right -->
+
+            <form class="form-inline my-2 my-lg-0 ">
+              <div class="nav-right">
+                <a class="nav-link" href="#">Request a demo</a>
+                <a class="nav-link a2" href="#">Login</a>
+                <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search"> -->
+                <button class=" my-2 my-sm-0 nav-button" type="submit">Get Notion free</button>  <!-- class="btn btn-outline-success"-->
+              </div>
+            </form>
+
+          </div>
+
+
+        </div>
+      </nav>
+
+
+
+
+
+
+
+
+
+
+
+      
+        <div class="main-layout">
+
+          <div class="hero">     <!-- hero section -->
+
+            <div class="card hero-half " style="width: 18rem; border: none;">
+              <div class="card-body hero-left">
+                <h1 class="card-title mt-5">The happier <br>Workspace</h1>
+                <p class="card-text">Write. Plan. Collaborate. With a little help from AI.</p><br><br>
+                <a id="a-left" href="#" class="btn btn-primary">Get Notion free</a>
+                <a class=" a-right" href="#" >Request a demo</a>
+                
+                <div class="trustedDiv">
+                  <span>Trusted by teams at</span>
+                  <div class="trustedimgs">
+                    <img class="img" src="affirm-gr.svg" alt="affirm-gr">
+                    <img class="img" src="remote-gr-v2.svg" alt="remote-gr-v2">
+                    <img class="img" src="1password-gr.svg" alt="1password-gr">
+                    <img class="img" src="figma-gr.svg" alt="figma-gr">
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="hero-half hero-video hero-right">
+              <video width="550px" height="300px" class="hero-video" src="hero-illustration.mp4" autoplay loop muted></video>
+            </div>
+
+          </div>
+
+
+
+
+          <!--  carousal  -->
+          <section class="container">
+            <div class="slider-wrapper">
+              <div class="slider">
+                <img id="slide1" src="/wikis.webp" alt="wikis">
+                <img id="slide2" src="/docs.webp" alt="docs">
+                <img id="slide3" src="/projects.webp" alt="projects">
+                <img id="slide4" src="/AI.webp" alt="AI">
+                <img id="slide5" src="/calender.webp" alt="calender">
+                <img id="slide6" src="/sites.webp" alt="sites">
+              </div>
+              <br>
+              <br>
+
+              
+              <div class="slider-nav">
+                <a href="#slide1">
+                  <div class="slider-nav-anchors">
+                    <i class="fa-solid fa-book-open"></i>
+                    <p>wikis</p>
+                  </div>
+                </a>
+                <a href="#slide2">
+                  <div class="slider-nav-anchors">
+                    <i class="fa-solid fa-book-open"></i>
+                    <p>Docs</p>
+                  </div>
+                </a>
+                <a href="#slide3">
+                  <div class="slider-nav-anchors">
+                    <i class="fa-solid fa-book-open"></i>
+                    <p>Projects</p>
+                  </div>
+                </a>
+                <a href="#slide4">
+                  <div class="slider-nav-anchors">
+                    <i class="fa-solid fa-book-open"></i>
+                    <p>AI</p>
+                  </div>
+                </a>
+                <a href="#slide5">
+                  <div class="slider-nav-anchors">
+                    <i class="fa-solid fa-book-open"></i>
+                    <p>Calender</p>
+                  </div>
+                </a>
+                <a href="#slide6">
+                  <div class="slider-nav-anchors">
+                    <i class="fa-solid fa-book-open"></i>
+                    <p>Sites</p>
+                  </div>
+                </a>
+              </div>
+              
+            </div>
+          </section>
+
+
+            <!--   layout2   -->
+          <div class="layout2 container hero">
+            <div class="row">
+
+              <div class="col-md-12 layout2-half layout2-half-left">
+                <h3>Build perfect docs, together.</h3>
+                <p class="Capture">Capture your ideas, get feedback from teammates, and ask AI to add the finishing touches.</p>
+                <br>
+                <p class="explore-more"><a class="explore-more" href="https://www.notion.com/explore" style="color:#087fe7;">Explore docs & notes</a> <i class="fa-solid fa-arrow-right"></i> </p>
+              </div>
+
+
+              <div class="col-md-12 layout2-half layout2-half-right">
+                <ul>
+                  <li>
+                    <video width="80px" height="80px" class="" src="buildingblocks.mp4" autoplay loop muted></video>
+                    <h4>Building blocks</h4>
+                    <p>100+ content types to communicate any idea.</p>
+                  </li>
+                  <li>
+                    <video width="80px" height="80px" class="" src="collaborativetools.mp4" autoplay loop muted></video>
+                    <h4>Collaborative tools</h4>
+                    <p>Built for teams to share, suggest, and comment.</p>
+                  </li>
+                  <li>
+                    <video width="80px" height="80px" class="" src="AIassisted.mp4" autoplay loop muted></video>
+                    <h4>AI-assisted</h4>
+                    <p>Edit, draft, translate. Ask and AI will help.</p>
+                  </li>
+                </ul>
+              </div>
+
+
+            </div>
+
+            <video style="margin-top: 30px;border-radius: 15px;" width="100%" src="layout2video.mp4"></video>
+            
+            <div class="layout2-end">
+              
+              <ul>
+                <li>
+                  <h4>Replaces</h4>
+                </li>
+                <li>
+                  <img src="/evernote.svg" alt="evernote" style="margin-left: 15px;">
+                  <p>Evernote</p>
+                </li>
+                <li>
+                  <img src="/gdocs.svg" alt="gdocs" style="margin-left: 15px;">
+                  <p>Google Docs</p>
+                </li>
+                <li>
+                  <img src="/coda.svg" alt="coda" style="margin-left: 15px;">
+                  <p>Coda</p>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+
+
+
+
+
+
+          <div class="layout2 container hero">
+            <div class="row">
+
+              <div class="col-md-12 layout2-half layout2-half-left">
+                <h3>Your workflow. Your way.</h3>
+                <p class="Capture">All your projects, goals, calendars, roadmaps, and more — in one tool — personalized to how you and your team work.</p>
+                <br>
+                <p class="explore-more"><a class="explore-more" href="https://www.notion.com/explore" style="color:#087fe7;">Explore projects</a> <i class="fa-solid fa-arrow-right"></i> </p>
+              </div>
+
+
+              <div class="col-md-12 layout2-half layout2-half-right">
+                <ul>
+                  <li>
+                    <video width="80px" height="80px" class="" src="https://www.notion.com/front-static/pages/product/super-duper/plan/plan-todos.mp4" autoplay loop muted></video>
+                    <h4>Tasks and to-dos</h4>
+                    <p>Tackle any project, big or small.</p>
+                  </li>
+                  <li>
+                    <video width="80px" height="80px" class="" src="https://www.notion.com/front-static/pages/product/super-duper/plan/plan-customizable.mp4" autoplay loop muted></video>
+                    <h4>Custom views</h4>
+                    <p>Visualize work in any format,<br> from calendars to boards.</p>
+                  </li>
+                  <li>
+                    <video width="80px" height="80px" class="" src="https://www.notion.com/front-static/pages/product/super-duper/plan/plan-automations.mp4" autoplay loop muted></video>
+                    <h4>Automations</h4>
+                    <p>Put tedious tasks on autopilot.</p>
+                  </li>
+                </ul>
+              </div>
+
+
+            </div>
+
+            <video style="margin-top: 30px;border-radius: 15px;" width="100%" src="https://www.notion.com/front-static/pages/product/super-duper/plan/plan-screen-desktop.mp4"></video>
+            
+            <div class="layout2-end">
+              
+              <ul>
+                <li>
+                  <h4>Replaces</h4>
+                </li>
+                <li>
+                  <img src="https://www.notion.com/front-static/pages/product/super-duper/tools/trello.svg" alt="Trello" style="margin-left: 15px;">
+                  <p>Trello</p>
+                </li>
+                <li>
+                  <img src="https://www.notion.com/front-static/pages/product/super-duper/tools/asana.svg" alt="Asana" style="margin-left: 15px;">
+                  <p>Asana</p>
+                </li>
+                <li>
+                  <img src="https://www.notion.com/front-static/pages/product/super-duper/tools/monday.svg" alt="Monday" style="margin-left: 15px;">
+                  <p>Monday</p>
+                </li>
+              </ul>
+              
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="layout2 container hero">
+            <div class="row">
+
+              <div class="col-md-12 layout2-half layout2-half-left">
+                <h3>Find everything. Instantly.</h3>
+                <p class="Capture">No more endless searching. Our built-in AI finds what you're looking for, whether its stored in Notion or one of your other apps.</p>
+                <br>
+                <p class="explore-more"><a class="explore-more" href="https://www.notion.com/explore" style="color:#087fe7;">Explore knowledge management</a> <i class="fa-solid fa-arrow-right"></i> </p>
+              </div>
+
+
+              <div class="col-md-12 layout2-half layout2-half-right">
+                <ul>
+                  <li>
+                    <video width="80px" height="80px" class="" src="https://www.notion.com/front-static/pages/product/super-duper/organize/organize-teamspaces.mp4" autoplay loop muted></video>
+                    <h4>Teamspaces</h4>
+                    <p>Dedicated spaces for every team & project.</p>
+                  </li>
+                  <li>
+                    <video width="80px" height="80px" class="" src="https://www.notion.com/front-static/pages/product/super-duper/organize/organize-integrations.mp4" autoplay loop muted></video>
+                    <h4>Integrations</h4>
+                    <p>Connected to all your other tools.</p>
+                  </li>
+                  <li>
+                    <video width="80px" height="80px" class="" src="https://www.notion.com/front-static/pages/product/super-duper/organize/organize-ai.mp4" autoplay loop muted></video>
+                    <h4>Just ask AI</h4>
+                    <p>Trusted answers across your apps.</p>
+                  </li>
+                </ul>
+              </div>
+
+
+            </div>
+
+            <video style="margin-top: 30px;border-radius: 15px;" width="100%" src="https://www.notion.com/front-static/pages/product/super-duper/organize/organize-screen-desktop.mp4"></video>
+            
+            <div class="layout2-end">
+              
+              <ul>
+                <li>
+                  <h4>Replaces</h4>
+                </li>
+                <li>
+                  <img src="https://www.notion.com/front-static/pages/product/super-duper/tools/trello.svg" alt="Confluence" style="margin-left: 15px;font-size: 10px;">
+                  <p>Confluence</p>
+                </li>
+                <li>
+                  <img src="https://www.notion.com/front-static/pages/product/super-duper/tools/asana.svg" alt="SharePoint" style="margin-left: 15px;size: 5px;">
+                  <p>SharePoint</p>
+                </li>
+                <li>
+                  <img src="https://www.notion.com/front-static/pages/product/super-duper/tools/google-drive.svg" alt="Google Drive" style="margin-left: 15px;">
+                  <p>Google Drive</p>
+                </li>
+              </ul>
+              
+            </div>
+
+          </div>
+
+
+
+
+
+
+             <!-- pin image -->
+          <div class="pinimage">
+            <img style="margin-top: 40px;" width=55% src="pinimage.png" alt="pinimage">
+          </div>
+
+
+
+
+
+          <div class="layout2 container hero">
+            <div class="row">
+
+              <div class="col-md-12 layout2-half layout2-half-left">
+                <h3>Get a brain boost..</h3>
+                <p class="Capture">Built right into your workspace, Notion AI is ready to brainstorm, summarize, help you write, and find what you’re looking for.</p>
+                <br>
+                <p class="explore-more"><a class="explore-more" href="https://www.notion.com/explore" style="color:#087fe7;">Try Notion AI</a> <i class="fa-solid fa-arrow-right"></i> </p>
+              </div>
+
+
+              <div class="col-md-12 layout2-half layout2-half-right">
+                <ul>
+                  <li>
+                    <video width="80px" height="80px" class="" src="https://www.notion.com/front-static/pages/product/super-duper/ai/ai-answers.mp4" autoplay loop muted></video>
+                    <h4>Instant answers</h4>
+                    <p>Ask any question about a team’s docs and projects.</p>
+                  </li>
+                  <li>
+                    <video width="80px" height="80px" class="" src="https://www.notion.com/front-static/pages/product/super-duper/ai/ai-editor.mp4" autoplay loop muted></video>
+                    <h4>Personalized editor</h4>
+                    <p>Generate content that’s always relevant.</p>
+                  </li>
+                  <li>
+                    <video width="80px" height="80px" class="" src="https://www.notion.com/front-static/pages/product/super-duper/ai/ai-connectors.mp4" autoplay loop muted></video>
+                    <h4>AI connectors beta</h4>
+                    <p>Access info from Slack, Google Drive and more, right inside Notion.</p>
+                  </li>
+                </ul>
+              </div>
+
+
+            </div>
+
+            <video style="margin-top: 30px;border-radius: 15px;" width="100%" src="https://www.notion.com/front-static/pages/product/super-duper/ai/ai-screen-desktop.mp4" autoplay loop muted></video>
+
+
+          </div>
+
+
+
+
+
+
+          <div>
+            
+          </div>
+
+         
+            
+          
+
+
+          
+          
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<footer>
+
+  <div class="footer-panel1">  
+    
+    
+    <div class="footer-box1">         <!-- fotter bo2 left half  -->
+      <img src="Notionlogo.png">
+      <div>
+        <i class="fa-brands fa-instagram" id="instagram" style="padding-right:10px"></i>
+        <i class="fa-brands fa-x-twitter" id="twitter" style="padding-right:10px"></i>
+        <i class="fa-brands fa-linkedin" id="linkedin" style="padding-right:10px"></i>
+        <i class="fa-brands fa-facebook" id="facebook" style="padding-right:10px"></i>
+        <i class="fa-brands fa-youtube" id="youtube" style="padding-right:10px"></i>
+      </div>
+      <button class="english-button">
+        <span class="english-btn"> 
+          <i class="fa-solid fa-language"></i>
+          <p>English</p>
+          <i class="fa-solid fa-chevron-down down-arrow"></i>
+        </span>
+      </button>
+      <a class="donotshare">Do Not Sell or Share My Info</a>
+      <a style="margin-bottom: 10px;">Cookie settings</a>
+      <p class="c">© 2025 Notion Labs, Inc.</p>
+    </div>
+    
+
+
+
+    <div class="footer-box2">    <!-- fotter box1 right half  -->
+      <div class="footer-box2-inner">
+        <p>Company</p>
+        <ul>
+          <li><a>About us</a></li>
+          <li><a>Careers</a></li>
+          <li><a>Security</a></li>
+          <li><a>Status</a></li>
+          <li><a>Terms & privacy</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="footer-box2">    <!-- fotter box2 right half  -->
+      <div class="footer-box2-inner">
+        <p>Download</p>
+        <ul>
+          <li><a>iOS & Android</a></li>
+          <li><a>Mac & Windows</a></li>
+          <li><a>Calendar</a></li>
+          <li><a>Web Clipper</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="footer-box2">    <!-- fotter box3 right half  -->
+      <div class="footer-box2-inner">
+        <p>Resources</p>
+        <ul>
+          <li><a>Help center</a></li>
+          <li><a>Pricing</a></li>
+          <li><a>Blog</a></li>
+          <li><a>Community</a></li>
+          <li><a>Integrations</a></li>
+          <li><a>Templates</a></li>
+          <li><a>Affiliates</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="footer-box2">    <!-- fotter box4 right half  -->
+      <div class="footer-box2-inner">
+        <p>Notion for</p>
+        <ul>
+          <li><a>Enterprise</a></li>
+          <li><a>Small business</a></li>
+          <li><a>Personal</a></li>
+          <br>
+          <br>
+          <br><br>
+          <p class="explore-more"><a class="explore-more" href="https://www.notion.com/explore" target="_blank">Explore more</a> <i class="fa-solid fa-arrow-right"></i> </p>
+        </ul>
+      </div>
+    </div>
+
+
+
+  </div>
+
+</footer>
+
+
+
+</body>
+</html>
